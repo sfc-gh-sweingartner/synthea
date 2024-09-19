@@ -16,6 +16,9 @@ https://github.com/synthetichealth/synthea/wiki/Basic-Setup-and-Running
 However, this produces CSV files and some columns were renamed and data types changed so it is better to simply 
 receive a Snowflake data share into a Snowflake environment. The steps below assume you will ask for and receive a share.  
 
+If you've never built anything with Cortex Analyst, you are encouraged to first do this Quickstart which served as the starting point of this solution:
+https://quickstarts.snowflake.com/guide/getting_started_with_cortex_analyst/index.html?index=..%2F..index#0
+
 Steps to deploy this demo:
 1. Have the right Snowflake Account
    
