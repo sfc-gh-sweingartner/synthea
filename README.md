@@ -61,13 +61,13 @@ Steps to deploy this demo:
    
 11. Configure and run your Cortex Analyst python script by doing the following:
    
-       a. Start an anaconda  (e.g. Install Anaconda Navigator, create a Python env.)  (See the Quickstart above.  If you've followed that lab, this is already done) 
+       a. Start an anaconda  (e.g. Install Anaconda Navigator, create a Python env.)  (See the Quickstart above.  If you've followed that lab, this is already done)
 
-       b. Create a python environment, open a terminal and install Cortex Analyst.  (See the Quickstart above.  If you've followed that lab, this is already done) 
+       b. Open a terminal in that environment and run the following command:  pip install streamlit snowflake-snowpark-python  (See the Quickstart above.  If you've followed that lab, this is already done) 
    
-       b. Download the cortex_synthea.py to your laptop
+       c. Download the cortex_synthea.py to your laptop
    
-       c. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
+       d. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
    
-       d. Save the file and run the following command:  streamlit run synthea_joins_01.yaml
+       e. Save the file and run the following command:  streamlit run synthea_joins_01.yaml
    
