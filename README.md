@@ -86,6 +86,17 @@ Steps to deploy this demo:
        f. What is the most common allergy for male patients, broken out by city, excluding the allergy of 'None'?
 
        g. What are the top 3 medications in terms of total cost for the 5 largest payers?
-       
-    
+
+# Open Issues 
+
+1. Work with the PM's to fix the occasional SQL join / SQL error with complex joins
+   
+2. The streamlit app attempts to make a chart but errors out sometimes when the dataset has too many columns to deal with.  So, fix up the code of the streamlit app
+   
+# Possible Improvements
+
+1. Add in 160k PMC patient notes with cortex search.  This is working with a Cortex RAG.  Just merge the two
+      
+2. Add hints to the column descriptions / YAML file.  Row by row, we need to provide guidance to do case intensitive, ilike, and / or similar terms.  Maybe fix that with the streamlit app instead
+      
    
