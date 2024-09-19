@@ -71,7 +71,7 @@ Steps to deploy this demo:
        d. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
    
        e. Save the file and run the following command:  streamlit run synthea_joins_01.yaml
-7. Example questions you can ask:
+7. Example questions you can ask:  (or look at the csv data model link or at the tables to come up with ideas.  Note that queries using joins are currently buggy as this is private preview)
    
        a. What sort of questions can I ask?
    
