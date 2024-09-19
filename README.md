@@ -30,13 +30,14 @@ Steps to deploy this demo:
        c. Click private sharing
        d. Click "Get" for the Synthea dataset
        e. Name this read only database as: SYNTHEA_5000_SHARE_READONLY and the schema should be SYNTHEA
-5. Open a SQL worksheet and run the contents of the script: setup.sql   
-       a. That script creates a copy of all those tables into a read / write database and schema (SYNTHEA.SYNTHEA) that you can change as you like
-6. Download the provided synthea_joins_01.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
+5. Open a SQL worksheet and run the contents of the script: createdb.sql   
+       a. (FYI...  That script creates a copy of all those tables into a read / write database and schema (SYNTHEA.SYNTHEA) that you can change as you like.
+           Note that the table and column data dictionary comments are not carried across but they have already been loaded into the yaml files) 
+7. Download the provided synthea_joins_01.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
        a. Click on the databases icon on the left
        b. Click on Synthea database then Synthea Schema then Synthea Stage
        c. Click add file and upload the provided YAML file to that stage
-7. Configure and run your Cortex Analyst python script by doing the following:
+8. Configure and run your Cortex Analyst python script by doing the following:
        a. Start an anaconda python environment and open a terminal. (e.g. Install Anaconda Navigator, create a Python env.  Open terminal)
        b. Download the cortex_synthea.py to your laptop
        c. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
