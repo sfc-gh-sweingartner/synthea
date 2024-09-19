@@ -75,11 +75,15 @@ Steps to deploy this demo:
    
        a. What sort of questions can I ask?
    
-       b. how many patients have a care plan vs how many don't?
+       b. How many patients have a care plan vs how many don't?
 
        c. What are the top five allergies for female patients?
 
        d. List the patients who are female and have an allergy of mold. Use a case insensitive search for any term similar to mold.
+
+       e. What are the top 5 highest cost conditions?
+
+       f. What is the most common allergy for male patients, broken out by city, excluding the allergy of 'None'?
        
     
    
