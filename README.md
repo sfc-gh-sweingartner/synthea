@@ -33,9 +33,9 @@ Steps to deploy this demo:
    
        e. Note that as of 19 Sep the new joins feature works pretty well however some queries will fail out.  Please share any errors with the PM team so they can fix the product
    
-3. Find the Account Locator of that enviroment and email or slack it to stephen.weingartner@snowflake.com who will do a direct share of the dataset
+2. Find the Account Locator of that enviroment and email or slack it to stephen.weingartner@snowflake.com who will do a direct share of the dataset
    
-5. After being informed the share is ready, then recieve it by
+3. After being informed the share is ready, then recieve it by
    
        a. logging into your env as Accountadmin
    
@@ -47,12 +47,12 @@ Steps to deploy this demo:
    
        e. Name this read only database as: SYNTHEA_5000_SHARE_READONLY and the schema should be SYNTHEA
    
-7. Open a SQL worksheet and run the contents of the script: createdb.sql
+4. Open a SQL worksheet and run the contents of the script: createdb.sql
    
        a. (FYI...  That script creates a copy of all those tables into a read / write database and schema (SYNTHEA.SYNTHEA) that you can change as you like.
            Note that the table and column data dictionary comments are not carried across but they have already been loaded into the yaml files)
    
-9. Download the provided synthea_joins_01.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
+5. Download the provided synthea_joins_01.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
     
        a. Click on the databases icon on the left
    
@@ -60,7 +60,7 @@ Steps to deploy this demo:
    
        c. Click add file and upload the provided YAML file to that stage
    
-11. Configure and run your Cortex Analyst python script by doing the following:
+6. Configure and run your Cortex Analyst python script by doing the following:
    
        a. Start an anaconda  (e.g. Install Anaconda Navigator, create a Python env.)  (See the Quickstart above.  If you've followed that lab, this is already done)
 
@@ -71,4 +71,15 @@ Steps to deploy this demo:
        d. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
    
        e. Save the file and run the following command:  streamlit run synthea_joins_01.yaml
+7. Example questions you can ask:
+   
+       a. What sort of questions can I ask?
+   
+       b. how many patients have a care plan vs how many don't?
+
+       c. What are the top five allergies for female patients?
+
+       d. List the patients who are female and have an allergy of mold. Use a case insensitive search for any term similar to mold.
+       
+    
    
