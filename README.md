@@ -10,6 +10,7 @@ More information about Synthea is located here:
 https://synthetichealth.github.io/synthea/
 The data dictionary can be found here:
 https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary
+Two snapshots of the Entity Relationship Diagram have been uploaded
 
 If required, you could generate a custom dataset yourself via their java program: 
 https://github.com/synthetichealth/synthea/wiki/Basic-Setup-and-Running
