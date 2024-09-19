@@ -84,6 +84,8 @@ Steps to deploy this demo:
        e. What are the top 5 highest cost conditions?
 
        f. What is the most common allergy for male patients, broken out by city, excluding the allergy of 'None'?
+
+       g. What are the top 3 medications in terms of total cost for the 5 largest payers?
        
     
    
