@@ -61,7 +61,9 @@ Steps to deploy this demo:
    
 11. Configure and run your Cortex Analyst python script by doing the following:
    
-       a. Start an anaconda python environment and open a terminal. (e.g. Install Anaconda Navigator, create a Python env.  Open terminal)
+       a. Start an anaconda  (e.g. Install Anaconda Navigator, create a Python env.)  (See the Quickstart above.  If you've followed that lab, this is already done) 
+
+       b. Create a python environment, open a terminal and install Cortex Analyst.  (See the Quickstart above.  If you've followed that lab, this is already done) 
    
        b. Download the cortex_synthea.py to your laptop
    
