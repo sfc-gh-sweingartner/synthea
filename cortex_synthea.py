@@ -10,7 +10,7 @@ HOST = "YOURACCOUNTLOCATOR.snowflakecomputing.com"
 DATABASE = "SYNTHEA"
 SCHEMA = "SYNTHEA"
 STAGE = "SYNTHEA"
-FILE = "synthea_joins_01.yaml"
+FILE = "synthea_joins_02.yaml"
 
 if 'CONN' not in st.session_state or st.session_state.CONN is None:
     st.session_state.CONN = snowflake.connector.connect(
