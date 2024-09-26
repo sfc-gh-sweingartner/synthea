@@ -27,7 +27,7 @@ Steps to deploy this demo:
    
        b. It must be in a region where Cortex Analyst is available.  Oregon AWS works well.
    
-       c. There are two yaml files.  One (synthea_joins_01.yaml) assumes that a new Private Preview feature which is "Cortex Joins" has been enabled in the account.
+       c. There are two yaml files.  One (synthea_joins_02.yaml) assumes that a new Private Preview feature which is "Cortex Joins" has been enabled in the account.
    
        d. A sales engineer can enable that preview feature.  If not, you can use the other yaml file (synthea_model_04) and change that name in the python script accordingly.
    
@@ -52,7 +52,7 @@ Steps to deploy this demo:
        a. (FYI...  That script creates a copy of all those tables into a read / write database and schema (SYNTHEA.SYNTHEA) that you can change as you like.
            Note that the table and column data dictionary comments are not carried across but they have already been loaded into the yaml files)
    
-5. Download the provided synthea_joins_01.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
+5. Download the provided synthea_joins_02.yaml file to your laptop then load it into the SYNTHEA stage by doing the following:
     
        a. Click on the databases icon on the left
    
@@ -70,7 +70,7 @@ Steps to deploy this demo:
    
        d. Configure the Snowflake environment details in that file.  (i.e. Replace YOURACCOUNTLOCATOR, YOURUSER, YOURPASSWORD, YOURWAREHOUSE)
    
-       e. Save the file and run the following command:  streamlit run synthea_joins_01.yaml
+       e. Save the file and run the following command:  streamlit run synthea_joins_02.yaml
 7. Example questions you can ask:  (or look at the csv data model link or at the tables to come up with ideas.  Note that queries using joins are currently buggy as this is private preview)
    
        a. What sort of questions can I ask?
