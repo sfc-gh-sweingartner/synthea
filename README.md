@@ -1,6 +1,22 @@
 # Snowflake Synthea Demo
 Snowflake Healthcare Demo using Cortex and Synthea 
 
+Update: 6 July 2025
+You can now use Snowflake Intelligence to query this Synthea dataset.  
+This new update includes: 
+1) Heavy fixes to the yaml file.
+2) Incorporation of Cortex Search into all dimension text files
+3) A script to setup the agent
+
+How to install the Snowflake Intelligence solution:
+1) Set up the data per the older steps below
+2) Upload the new yaml file into the same stage location (Synthea / Synthea) syntheaSI1.yaml
+3) Run the script to create all the cortex searches - create_synthea_search_services.sql
+4) Make sure your Snowflake Intelligence is working 
+5) Run the agent script (synthea_agent.sql) to insert a new row into the Snowflake Intelligence table (Note that table is part of the Private Preview and may change with Public Preview)  If you are unable to do this in PuPr or GA then you can use the SI UI manually create all this information.  
+
+
+
 This git will enable you to create a demo enviornment with syntetic data.  You can run BI reports, streamlit apps on top, 
 or build AI solutions.  This git also offers a Cortex Analyst python file and yaml file that allow you to run 
 text to SQL / AI against this dataset.  
