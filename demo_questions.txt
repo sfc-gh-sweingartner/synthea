@@ -1,0 +1,63 @@
+Example demo questions:  
+
+Questions for a Healthcare Provider/Administrator
+Provider Performance:
+"Which provider has seen the most unique patients?"
+"What is the average number of encounters per provider per month?"
+"List the top 10 providers by the number of procedures they performed."
+Facility Utilization:
+"How many encounters took place at 'Massachusetts General Hospital'?"
+"What is the average number of patients seen per facility per day?"
+"Which facilities have the highest volume of emergency encounters?"
+Resource Management:
+"How many beds were occupied on average in the last quarter across all facilities?" (Assuming 'encounters' or 'observations' can infer this)
+"What is the total cost of all procedures performed last year?" (If cost data is available, otherwise focus on volume)
+Patient Flow:
+"What is the average length of stay for patients admitted to the emergency department?"
+"How many patients were discharged from the hospital in the last six months?"
+Quality of Care (Indirect):
+How many patients with 'Type 2 Diabetes' have an 'HbA1c' reading above 7%?
+
+Questions for a Government Health Manager/Public Health Official
+Population Health Trends:
+"What is the prevalence of 'Asthma' in the patient population, broken down by age group?  (Break out age group by decade)"
+"How many new cases of 'Influenza' were recorded in the last season?"
+"What is the distribution of patient ethnicity in the database?"
+Disease Surveillance:
+"Identify any significant clusters of 'Measles' cases by city or county." (Requires location data in patients/encounters)
+"How many deaths were reported last year, and what were the most common causes of death?"
+Healthcare Disparities:
+"Compare the average number of encounters for patients in rural vs. urban areas." (Requires location data)
+"Are there any differences in medication adherence rates (inferred from prescription refills) between different socioeconomic groups?" (If income/education data is available in patient profiles)
+Policy and Planning:
+"What is the total expenditure on 'cardiovascular diseases' across all patients?" (Requires cost data)
+"How many patients are uninsured?" (If insurance status is captured)
+"Project the number of patients expected to develop 'Alzheimer's Disease' in the next 5 years based on current trends and age demographics." (This would require more advanced analytical capabilities beyond basic text-to-SQL, but a simpler version could be: "How many patients currently have a condition that is a precursor to Alzheimer's?")
+
+10 Medium Complexity Queries
+These queries often involve joining 2-3 tables, basic filtering, and simple aggregations.
+Patients with a specific condition and their primary care provider: What is the average duration (in days) of hospital inpatient encounters? Show several splits. (i.e. by provider, by county, by race, by patient age band (25 year grouping) )
+Average length of stay for a specific encounter type: What is the average duration (in days) of hospital inpatient encounters? Break this out by the organisation.
+Top 5 most common reasons for medication prescriptions: "List the top 5 most common reasons for which medications were prescribed, along with the count for each reason."
+Number of patients seen by each organization in a given year: "For each healthcare organization, how many unique patients did they have encounters with in the year 2023?"
+Patients who have undergone a specific procedure and their age at the time: "Find all patients who had a 'Appendectomy' procedure, and for each patient, report their name and their age (in years) when the procedure occurred."
+Medications prescribed to patients with a certain allergy: "List all medications prescribed to patients who have an allergy to 'Penicillin'."
+Patients with multiple chronic conditions: "Identify patients who have both 'Hypertension' and 'Hyperlipidemia' conditions, and list their names."
+Providers with the highest number of encounters for a specific condition: "Which provider has the highest number of encounters where the patient was diagnosed with 'Chronic Obstructive Pulmonary Disease (COPD)'?"
+Patients who visited the emergency department more than X times in a year: "Find patients who had more than 3 emergency department encounters in the year 2022."
+Average blood pressure reading for a specific age group: "What is the average systolic and diastolic blood pressure reading for female patients between 50 and 60 years old?" (Assumes observations contains blood pressure readings with CODE for systolic/diastolic and UNIT as 'mmHg').
+
+10 Complex Queries
+These queries require more intricate joins, subqueries, common table expressions (CTEs), advanced aggregations, and potentially handling missing data or multiple date ranges.
+Patient Readmission Rate (within X days): Calculate the 20-day readmission rate for all patients who had a hospital inpatient encounter. Consider a readmission if a patient has another inpatient encounter within 20 days of discharge from a previous one. ​​Break this out by County the patient lives in.
+Progression of a condition over time (e.g., Diabetes management): For patients diagnosed with 'Type 2 Diabetes Mellitus', track the average 'HbA1c' levels over their last three recorded observations, indicating if their most recent level is higher or lower than their previous average
+Follow up:  Thanks. Rather than break that out by patient, can you break that out by the county that the patient lives in.
+Cost analysis per patient per condition (if cost data exists): "For each patient, calculate the total estimated cost (across encounters and procedures, if cost data is present) associated with their 'Ischemic Heart Disease' diagnosis." 
+Geographic analysis of condition prevalence: Identify the top 3 counties with the highest prevalence of 'Asthma', and for each county, report the number of affected patients, the total number of patients and the total population of that county.  You can use publicly available data for total population.  
+Provider workload and patient diversity: For each provider, calculate the total number of unique patients they have seen, and the number of distinct conditions they have diagnosed across all their patients.
+Patients with no recorded encounters in the last year but with active conditions: Find patients who have at least one ongoing condition (no STOP date or STOP date in the future) but have not had any encounters recorded in the last 18 months.
+Follow up: Please summarise that by county that the patient lives in and compare it to the total number of patients in that county
+Effectiveness of a medication for a specific condition (inferred): Identify patients who were prescribed 'Amlodipine' for 'Hypertension'. Among these patients, what percentage saw their average systolic blood pressure decrease after starting the medication?
+Patient cohorts based on multiple criteria (e.g., age, conditions, procedures): Segment patients into groups based on their age (i.e. 0-18, 19-64, 65+) and the presence of 'Chronic Kidney Disease'. For each segment, report the count of patients and the average number of distinct medications prescribed.
+Predictive scenario: Patients at risk of developing a condition: Identify patients over 50 years old with 'Prediabetes' and 'Obesity' who have not had an 'HbA1c' observation in the last 12 months, as these might be at higher risk of developing 'Type 2 Diabetes Mellitus' and require follow-up.
+Analyze patterns of concurrent conditions: Which two conditions are most frequently diagnosed together (within the same encounter or within 10 days of each other)?
